@@ -61,6 +61,7 @@
         "unordered_map": "cpp",
         "vector": "cpp",
         "queue": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "list": "cpp"
     }
 }

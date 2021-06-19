@@ -8,9 +8,7 @@ var scoreOfParentheses = function (s) {
         if (s[i] === '(') {
             calcArr.push(-1)
         } else {
-            const { pos, subSum } = findLastMinusOne(calcArr)
-            calcArr[pos] = 2 * subSum || 1
-            calcArr.splice(pos + 1)
+            findLastMinusOne(calcArr)
         }
     }
     const ret = calcArr.reduce((pre, cur) => pre + cur, 0)
@@ -31,10 +29,8 @@ const findLastMinusOne = (arr) => {
         }
         i--;
     }
-    return {
-        pos,
-        subSum: tempRet
-    }
+    arr[pos] = 2 * tempRet || 1
+    arr.splice(pos + 1)
 }
 
 const s = "(()(()))"
