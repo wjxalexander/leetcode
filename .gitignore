@@ -1,5 +1,5 @@
 .vscode
-*.dSYM
+*/**/*.dSYM
 # Prerequisites
 *.d
 
@@ -32,3 +32,8 @@
 *.exe
 *.out
 *.app
+
+*
+!/**/
+!*.*
+*.DS_Store
