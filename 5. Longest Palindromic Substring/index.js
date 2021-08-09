@@ -24,7 +24,7 @@ var longestPalindrome = function (s) {
   for (let i = 2; i < length; i++) {
     for (let j = 0; j < length; j++) {
       if (s[j] === s[j + i] && dp[i - 2][j + i - 1] === 1) {
-        // S[n-1] 为true
+        //dp[i - 2][j + i - 1] 是 S[n-1] 为true
         const subStringLen = j + i + 1 - j;
         const currentRetLen = ret[1] - ret[0];
         if (subStringLen > currentRetLen) {
